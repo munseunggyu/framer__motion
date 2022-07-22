@@ -13,11 +13,11 @@ flex-direction:column;
 position:relative;
 `;
 
-const Box = styled(motion.div)`
+export const Box = styled(motion.div)`
   background-color:whitesmoke;
   width:300px;
   height:300px;
-  border-radius:20px;
+  border-radius:30px;
   margin-bottom:50px;
 `;
 
@@ -62,8 +62,9 @@ const BoxVariants = {
 export const refresh = () => window.location.reload()
 
 function Animation(){
-  const navigate = useNavigate()
-  const nextPage = () => navigate('variants')
+ const navigate = useNavigate()
+ const nextPage = () => navigate('variants')
+  
   return (
     <Wrapper 
     style={{

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ImArrowRight } from "react-icons/im";
+import { ImArrowLeft, ImArrowRight } from "react-icons/im";
 import { IoMdRefresh } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Btn, Next, refresh, Title, Wrapper } from "./Animation";
 
@@ -8,7 +9,7 @@ const BoxWrapper = styled(motion.div)`
 background-color:rgba(0,0,0,0.2);
   width:300px;
   height:300px;
-  border-radius:20px;
+  border-radius:30px;
   margin-bottom:50px;
   display: grid;
   grid-template-columns:repeat(2,1fr);
@@ -19,6 +20,11 @@ const Ball = styled(motion.div)`
   height:70%;
   background-color:whitesmoke;
   border-radius:50%;
+`
+export const Prev = styled.div`
+  position:absolute;
+  right:100px;
+  bottom:30px;
 `
 const ballWrapperVariants = {
   hidden :{
@@ -45,6 +51,9 @@ const ballVariants = {
 }
 
 function Variants(){
+  const navigate = useNavigate()
+  const nextPage = () => navigate('/gestures')
+  const prevPage = () => navigate('/')
   return (
     <Wrapper 
       style={{background:'linear-gradient(RGB(218, 0, 238),RGB(165, 14, 252))'}}    
@@ -66,7 +75,10 @@ function Variants(){
         <IoMdRefresh size='25' color="white" />
       </Btn>
       <Title>Variants</Title>
-      <Next>
+      <Prev onClick={prevPage}>
+        <ImArrowLeft size='40' color='white' />
+      </Prev>
+      <Next onClick={nextPage}>
        <ImArrowRight size='40' color='white' />
       </Next>
     </Wrapper>

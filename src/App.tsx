@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState, useTransition } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 import Animation from './Components/Animation';
+import Drag from './Components/Drag';
+import Gestures from './Components/Gestures';
 import Variants from './Components/Variants';
 
 const GlobalStyle = createGlobalStyle`
@@ -64,6 +66,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Animation />} />
 		<Route path='variants' element={<Variants /> } />
+		<Route path='gestures' element={<Gestures /> } />
+		<Route path='drag' element={<Drag /> } />
       </Routes>
     </>
   );
