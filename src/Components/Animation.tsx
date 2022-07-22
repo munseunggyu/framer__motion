@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import {IoMdRefresh} from 'react-icons/io'
-
+import {ImArrowRight} from 'react-icons/im'
+import { useNavigate } from "react-router-dom";
 export const Wrapper = styled.div`
 height:100vh;
 width:100vw;
@@ -20,9 +21,8 @@ const Box = styled(motion.div)`
   margin-bottom:50px;
 `;
 
-const Btn = styled.div`
+export const Btn = styled.div`
   background-color:rgba(0,0,0,0.2);
-  outline:none;
   display: flex;
   align-items:center;
   justify-content:center;
@@ -31,13 +31,18 @@ const Btn = styled.div`
   border-radius:50%;
 `
 
-const Title = styled.div`
+export const Title = styled.div`
   position:absolute;
   font-size:50px;
   font-weight:700;
   color:white;
   bottom:30px;
   left:30px;
+`
+export const Next = styled.div`
+  position:absolute;
+  right:30px;
+  bottom:30px;
 `
 
 const BoxVariants = {
@@ -54,9 +59,11 @@ const BoxVariants = {
 
   }
 }
+export const refresh = () => window.location.reload()
 
 function Animation(){
-  const refresh = () => window.location.reload()
+  const navigate = useNavigate()
+  const nextPage = () => navigate('variants')
   return (
     <Wrapper 
     style={{
@@ -72,6 +79,9 @@ function Animation(){
      <IoMdRefresh size='25' color="white" />
      </Btn>
      <Title>Animation</Title>
+     <Next onClick={nextPage}>
+      <ImArrowRight size='40' color='white' />
+     </Next>
     </Wrapper>
   );
 }

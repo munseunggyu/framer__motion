@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState, useTransition } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 import Animation from './Components/Animation';
+import Variants from './Components/Variants';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -62,6 +63,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path='/' element={<Animation />} />
+		<Route path='variants' element={<Variants /> } />
       </Routes>
     </>
   );
