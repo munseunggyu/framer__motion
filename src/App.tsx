@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState, useTransition } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
+import Animation from './Components/Animation';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -29,7 +31,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1.2;
-  background:linear-gradient(135deg,#e09,#d0e);
 }
 ol, ul {
 	list-style: none;
@@ -51,28 +52,17 @@ table {
 }
 `
 
-const Wrapper = styled.div`
-  height:100vh;
-  width:100vw;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-`
-const Box = styled.div`
-  width:200px;
-  height:200px;
-  background-color:white;
-  border-radius:10px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
-`
+
+
 
 function App() {
+
   return (
     <>
       <GlobalStyle />
-      <Wrapper>
-       <Box />
-     </Wrapper>
+      <Routes>
+        <Route path='/' element={<Animation />} />
+      </Routes>
     </>
   );
 }
