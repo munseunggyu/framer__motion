@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Btn, Next, refresh, Title, Wrapper } from "./Animation";
 
-const BoxWrapper = styled(motion.div)`
+export const BoxWrapper = styled(motion.div)`
 background-color:rgba(0,0,0,0.2);
   width:300px;
   height:300px;
@@ -13,6 +13,7 @@ background-color:rgba(0,0,0,0.2);
   margin-bottom:50px;
   display: grid;
   grid-template-columns:repeat(2,1fr);
+  overflow:hidden;
   place-items:center;
 `
 const Ball = styled(motion.div)`
