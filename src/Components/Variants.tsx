@@ -23,7 +23,7 @@ const Ball = styled(motion.div)`
   border-radius:50%;
 `
 export const Prev = styled.div`
-  position:absolute;
+  position:fixed;
   right:100px;
   bottom:30px;
 `

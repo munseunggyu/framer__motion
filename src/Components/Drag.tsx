@@ -15,7 +15,7 @@ const SmallBox = styled(motion.div)`
 
 function Drag(){
   const navigate = useNavigate()
-  const nextPage = () => navigate('/drag')
+  const nextPage = () => navigate('/scroll')
   const prevPage = () => navigate('/gestures')
   // const x = useMotionValue(0) 
   // const scale = useTransform(x,[-800,0,800],[2,1,0.1])

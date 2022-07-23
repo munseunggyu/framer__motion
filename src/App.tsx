@@ -4,6 +4,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 import Animation from './Components/Animation';
 import Drag from './Components/Drag';
 import Gestures from './Components/Gestures';
+import Path from './Components/Path';
+import Scroll from './Components/Scroll';
 import Variants from './Components/Variants';
 
 const GlobalStyle = createGlobalStyle`
@@ -68,6 +70,8 @@ function App() {
 		<Route path='variants' element={<Variants /> } />
 		<Route path='gestures' element={<Gestures /> } />
 		<Route path='drag' element={<Drag /> } />
+		<Route path='scroll' element={<Scroll /> } />
+		<Route path='path' element={<Path /> } />
       </Routes>
     </>
   );

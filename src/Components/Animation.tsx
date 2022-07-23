@@ -32,7 +32,7 @@ export const Btn = styled.div`
 `
 
 export const Title = styled.div`
-  position:absolute;
+  position:fixed;
   font-size:50px;
   font-weight:700;
   color:white;
@@ -40,7 +40,7 @@ export const Title = styled.div`
   left:30px;
 `
 export const Next = styled.div`
-  position:absolute;
+  position:fixed;
   right:30px;
   bottom:30px;
 `
