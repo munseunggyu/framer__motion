@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { ImArrowLeft } from "react-icons/im";
+import { ImArrowLeft, ImArrowRight } from "react-icons/im";
 import { IoMdRefresh } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { Box,Btn,refresh, Wrapper,Title } from "./Animation";
+import { Box,Btn,refresh, Wrapper,Title, Next } from "./Animation";
 import {  Prev } from "./Variants";
 
 const Svg = styled(motion.svg)`
@@ -26,9 +26,8 @@ const svgVariants = {
 }
 
 function Path(){
-  
   const navigate = useNavigate()
-  // const nextPage = () => navigate('/drag')
+  const nextPage = () => navigate('/animatepresences')
   const prevPage = () => navigate('/scroll')
   return (
   <Wrapper
@@ -69,6 +68,9 @@ function Path(){
       <Prev onClick={prevPage}>
         <ImArrowLeft size='40' color='white' />
       </Prev>
+      <Next onClick={nextPage}>
+          <ImArrowRight size='40' color='white' />
+      </Next>
 
   </Wrapper>
   );

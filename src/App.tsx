@@ -1,13 +1,12 @@
-import React, { useEffect, useRef, useState, useTransition } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
+import AnimatePresences from './Components/AnimatePresence';
 import Animation from './Components/Animation';
 import Drag from './Components/Drag';
 import Gestures from './Components/Gestures';
 import Path from './Components/Path';
 import Scroll from './Components/Scroll';
 import Variants from './Components/Variants';
-
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -69,6 +68,7 @@ function App() {
 		<Route path='drag' element={<Drag /> } />
 		<Route path='scroll' element={<Scroll /> } />
 		<Route path='path' element={<Path /> } />
+		<Route path='animatepresences' element={<AnimatePresences /> } />
       </Routes>
     </>
   );
