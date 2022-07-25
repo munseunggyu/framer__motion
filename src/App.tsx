@@ -57,9 +57,6 @@ table {
 }
 `
 
-
-
-
 function App() {
 
   return (
