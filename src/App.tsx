@@ -6,6 +6,7 @@ import Drag from './Components/Drag';
 import Gestures from './Components/Gestures';
 import Path from './Components/Path';
 import Scroll from './Components/Scroll';
+import Slider from './Components/Slider';
 import Variants from './Components/Variants';
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -69,7 +70,8 @@ function App() {
 		<Route path='scroll' element={<Scroll /> } />
 		<Route path='path' element={<Path /> } />
 		<Route path='animatepresences' element={<AnimatePresences /> } />
-      </Routes>
+		<Route path='slider' element={<Slider /> } />
+	  </Routes>
     </>
   );
 }

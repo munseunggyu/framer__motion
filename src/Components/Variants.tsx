@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ImArrowLeft, ImArrowRight } from "react-icons/im";
 import { IoMdRefresh } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Btn, Next, refresh, Title, Wrapper } from "./Animation";
-
 export const BoxWrapper = styled(motion.div)`
 background-color:rgba(0,0,0,0.2);
   width:300px;

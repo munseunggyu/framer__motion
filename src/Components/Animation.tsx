@@ -19,6 +19,10 @@ export const Box = styled(motion.div)`
   height:300px;
   border-radius:30px;
   margin-bottom:50px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
 `;
 
 export const Btn = styled.div`
@@ -26,6 +30,7 @@ export const Btn = styled.div`
   display: flex;
   align-items:center;
   justify-content:center;
+  cursor: pointer;
   width:40px;
   height:40px;
   border-radius:50%;

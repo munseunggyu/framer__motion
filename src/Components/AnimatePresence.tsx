@@ -22,7 +22,7 @@ const boxVariants = {
 
 function AnimatePresences(){
   const navigate = useNavigate()
-  const nextPage = () => navigate('/animatepresences')
+  const nextPage = () => navigate('/slider')
   const prevPage = () => navigate('/path')
   const [showing,setShowing] = useState(true)
   const toggleShowing = () => {
