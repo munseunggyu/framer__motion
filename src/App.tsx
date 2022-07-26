@@ -63,7 +63,7 @@ function App() {
     <>
       <GlobalStyle />
       <Routes>
-        <Route path='/' element={<Animation />} />
+        <Route path='/*' element={<Animation />} />
 		<Route path='variants' element={<Variants /> } />
 		<Route path='gestures' element={<Gestures /> } />
 		<Route path='drag' element={<Drag /> } />
