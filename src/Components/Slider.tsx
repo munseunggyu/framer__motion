@@ -30,12 +30,20 @@ function Slider(){
   const prevPage = () => navigate('/animatepresences')
   const [visible,setVisible] = useState(1)
   const [back,setBack] = useState(false)
+  const [leaving,setLeaving] = useState(false);
+  const toggleLeaving = () => {
+    setLeaving(prev => !prev)
+  }
   const nxt = () => {
+    if(leaving) return
     setBack(false)
+    toggleLeaving()
     setVisible(prev => prev ===6 ? 1 : prev +1)
   }
   const prv = () => {
+    if(leaving) return
     setBack(true)
+    toggleLeaving()
     setVisible(prev => prev === 1 ? 6 : prev-1)
   }
   return(
@@ -47,6 +55,7 @@ function Slider(){
     >
       <AnimatePresence
       // initial={false}
+      onExitComplete={toggleLeaving}
       custom={back}>
       {[1,2,3,4,5,6].map(v => {
         return(
