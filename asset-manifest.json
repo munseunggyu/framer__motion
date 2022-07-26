@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/animation--demo/static/js/main.f2a2d69d.js",
-    "index.html": "/animation--demo/index.html",
-    "main.f2a2d69d.js.map": "/animation--demo/static/js/main.f2a2d69d.js.map"
+    "main.js": "/framer__motion/static/js/main.9844a5b2.js",
+    "index.html": "/framer__motion/index.html",
+    "main.9844a5b2.js.map": "/framer__motion/static/js/main.9844a5b2.js.map"
   },
   "entrypoints": [
-    "static/js/main.f2a2d69d.js"
+    "static/js/main.9844a5b2.js"
   ]
 }
