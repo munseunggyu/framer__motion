@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/animation--demo/static/js/main.f2a2d69d.js",
+    "index.html": "/animation--demo/index.html",
+    "main.f2a2d69d.js.map": "/animation--demo/static/js/main.f2a2d69d.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f2a2d69d.js"
+  ]
+}
